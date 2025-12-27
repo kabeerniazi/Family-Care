@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Family Care</title>
+    <style>
+    :root {
+  --blue-dark: #0b3c78;
+  --blue-main: #1667b8;
+  --blue-light: #e0f0ff;
+  --blue-soft: #f2f7ff; 
+  --accent: #22c1c3;
+  --text-main: #f5f9ff;
+  --text-muted: #c8dcff;
+  --card-bg: #0f4e9b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(6, 33, 82, 0.96);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 0; 
+  background: transparent center/contain no-repeat url("Picture1.png");
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.12rem; 
+  flex: 0 0 auto; 
+  overflow: visible;
+}
+
+.logo-icon > img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.nav-cta {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: #ffffff;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #22c1c3, #0b92d4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #102A59;  ;
+}
+
+.hero-text h1 span {
+  color: #102A59;
+}
+
+.hero-text p {
+  color: #102A59;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.8rem;
+}
+
+.badge {
+  background: rgba(16, 80, 160, 0.98);
+  color: var(--text-main);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(142, 188, 255, 0.7);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background:#002249;
+  border: none;
+  color: #ffffff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+.btn-outline {
+  background: #102A59;
+  color: var(--text-main);
+  border: 1px solid #102A59;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(17, 72, 143, 0.9);
+}
+
+.hero-media {
+  position: relative;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top, #2ab8ff 0, #0b3c78 55%, #051632 100%);
+  border-radius: 30px;
+  padding: 1.2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-card img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.hero-tag {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.6rem;
+  background: rgba(2, 18, 52, 0.95);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(101, 179, 255, 0.9);
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.1rem;
+  background: rgba(1, 23, 63, 0.97);
+  border-radius: 18px;
+  padding: 0.7rem 0.9rem;
+  min-width: 180px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-floating-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: #ffffff;
+}
+
+.hero-floating-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.section-header h2 {
+  font-size: 1.9rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.section-header p {
+  color: var(--text-muted);
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 2fr);
+  gap: 2.5rem;
+  align-items: start;
+  background: #102A59;
+  border-radius: 26px;
+  padding: 2.2rem;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.about-badge {
+  background: rgba(6, 51, 120, 0.98);
+  color: #ffffff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  border: 1px solid rgba(101, 179, 255, 0.9);
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-text p {
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 0.3rem;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+  color: var(--text-main);
+}
+
+.about-list li span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3fe6d0, #1d9af2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #003157;
+}
+
+.why {
+  background: #102A59;
+  border-radius: 30px;
+  padding: 2.4rem 2rem 2.6rem;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(210px, 1fr));
+  gap: 1.4rem;
+}
+
+.feature-card {
+  background: rgba(4, 42, 96, 0.98);
+  border-radius: 18px;
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(125, 187, 255, 0.6);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.7);
+  border-color: var(--accent);
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2af598, #009efd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+  color: #002249;
+  font-size: 1.12rem;
+}
+
+.feature-card h3 {
+  font-size: 1.02rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.stats {
+  margin-top: 2.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 1.3rem;
+}
+
+.stat-card {
+  background: rgba(5, 40, 88, 0.98);
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border: 1px solid rgba(101, 179, 255, 0.7);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+}
+
+.stat-card h3 {
+  font-size: 1.5rem;
+  color: #42e8e0;
+  margin-bottom: 0.15rem;
+}
+
+.stat-card p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1100px) {
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+  .stats {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .why-grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team {
+  background: #102A59;
+  border-radius: 30px;
+  padding: 2.5rem 2rem 2.7rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+.team-card {
+  background: rgba(5, 38, 87, 0.98);
+  border-radius: 20px;
+  padding: 1rem 1rem 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(148, 199, 255, 0.7);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  will-change: transform;
+}
+
+.team-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.65);
+  border-color: var(--accent);
+}
+
+.team-card .team-member-image {
+  width: clamp(56px, 8vw, 72px);
+  height: clamp(56px, 8vw, 72px);
+  margin: 0 auto 0.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #42e8e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card .team-member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.team-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cta {
+  margin-top: 3rem;
+  background: #102A59;
+  border-radius: 24px;
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #002034;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+}
+
+.cta h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  color:#ffffff;
+}
+
+.cta p {
+  font-size: 0.96rem;
+  color:#ffffff;
+}
+
+.cta .btn-primary {
+  background: #ffffff;
+  color: #102A59;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
+}
+
+.cta .btn-primary:hover {
+  background: #f4fbff;
+}
+
+        footer {
+            background-color: #102A59;
+            color: var(--white);
+            padding: 3rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 5px solid #fafafa;
+            opacity: 0.8;
+            font-size: 0.85rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: #002249  ;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(233, 236, 238, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(91, 159, 214, 0.4);
+        }
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    position: static;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 2.4rem 0;
+  }
+
+  .about-wrapper,
+  .why,
+  .team {
+    padding: 1.7rem 1.2rem 2rem;
+  }
+
+  .cta {
+    padding: 1.4rem 1.1rem;
+  }
+}
+    </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <div class="logo-icon" src="Picture1.png"alt="FC"></div>
+          <a href="homepage.html"> <span class="logo-text">Family Care</span></a></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#why-choose">Why Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+       <a href="login.html"><button class="nav-cta">Login/SignUp</button></a> 
+      </div>
+    </div>
+  </header>
+
+
+
+  <section id="about">
+    <div class="container hero">
+      <div class="hero-text">
+        <br>
+        <h1>About <span>Family Care</span></h1>
+        <p>We are a modern, patient-centered healthcare clinic dedicated to providing safe, reliable, and affordable medical services. Our team of certified doctors, nurses, and specialists works together to deliver high-quality care with compassion and professionalism.</p>
+        <div class="hero-badges">
+          <span class="badge">Patient-centered care</span>
+          <span class="badge">Modern technology</span>
+          <span class="badge">Trusted by families</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary">Schedule Appointment</button>
+          <button class="btn-outline">Learn More</button>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <img src="about 1.jpg" alt="Family Care Clinic">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="about-wrapper">
+      <div class="about-images">
+        <img src="about 2.jpg" alt="Healthcare team with family">
+        <img src="about 3.jpg" alt="Medical team">
+        <img src="about 4.jpg" alt="Clinic staff">
+        <img src="about 5.jpg" alt="Happy patient">
+      </div>
+      <div class="about-text">
+        <span class="about-badge">Our Mission</span>
+        <h3>Committed to your family's health</h3>
+        <p><strong>To provide exceptional healthcare services</strong> that are accessible, affordable, and patient-centered, ensuring every individual receives the best possible medical care in a welcoming and professional environment.</p>
+        <p>Family Care was founded on the belief that everyone deserves access to quality healthcare without compromise. We combine modern medical technology with compassionate care to support every stage of life.</p>
+        <ul class="about-list">
+          <li> Comprehensive primary and specialist care</li>
+          <li> Personalized treatment plans for each patient</li>
+          <li> Focus on prevention, wellness, and education</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="why-choose">
+    <div class="why">
+      <div class="section-header">
+        <h2>Why Choose Family Care?</h2>
+        <p>Everything your family needs in one trusted clinic.</p>
+      </div>
+      <div class="why-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="icon.jpg" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Experienced & friendly staff</h3>
+          <p>Highly trained doctors, nurses, and support staff focused on your comfort and safety.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+           <img src="icon1.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Clean & safe environment</h3>
+          <p>Strict hygiene protocols and a welcoming atmosphere for every visit.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="icon2.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Modern medical equipment</h3>
+          <p>Up‑to‑date diagnostic tools and treatment technology.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+          <img src="icon3.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Quick appointments</h3>
+          <p>Fast scheduling and minimal wait times to respect your time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+          <img src="icon4.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Full support & care</h3>
+          <p>Continuous follow‑up and guidance throughout your treatment journey.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+          <img src="icon5.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Affordable services</h3>
+          <p>Transparent pricing and flexible payment options for families.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <h3>500+</h3>
+          <p>Happy patients monthly</p>
+        </div>
+        <div class="stat-card">
+          <h3>15+</h3>
+          <p>Years of experience</p>
+        </div>
+        <div class="stat-card">
+          <h3>98%</h3>
+          <p>Patient satisfaction rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll('.stat-card h3');
+  const duration = 2000; 
+  let animated = false; 
+
+  function animateCounters() {
+    counters.forEach(counter => {
+      const target = +counter.innerText.replace(/\D/g, ""); 
+      let start = 0;
+      const increment = target / (duration / 16); 
+      const suffix = counter.innerText.replace(/[0-9]/g, ""); 
+
+      const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+          counter.innerText = Math.floor(start) + suffix;
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+
+      counter.innerText = "0" + suffix;
+      updateCounter();
+    });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animated = true;
+        animateCounters();
+      }
+    });
+  }, { threshold: 0.5 }); 
+
+  const statsSection = document.querySelector('.stats');
+  if (statsSection) observer.observe(statsSection);
+});
+</script>
+
+
+  <section class="container" id="team">
+    <div class="team">
+      <div class="section-header">
+        <h2>Our Professional Team</h2>
+        <p>Dedicated specialists caring for your whole family.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-member-image">
+            <img src="doctor1.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Dr. Ahmed Khan</h3>
+          <p>Chief Medical Officer</p>
+        </div>
+        <div class="team-card">
+          <div class="team-member-image">
+            <img src="doctor2.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Dr. Sarah Johnson</h3>
+          <p>General Practitioner</p>
+        </div>
+        <div class="team-card">
+          <div class="team-member-image">
+            <img src="doctor3.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Dr. Lisa Chen</h3>
+          <p>Pediatric Specialist</p>
+        </div>
+        <div class="team-card">
+          <div class="team-member-image">
+            <img src="doctor4.png" alt="Experience icon" style="width:100%; height:100%; object-fit:cover; border-radius:inherit; display:block;">
+          </div>
+          <h3>Dr. James Williams</h3>
+          <p>Cardiology Specialist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="contact">
+    <div class="cta">
+      <div>
+        <h2>Ready to experience excellent healthcare?</h2>
+        <p>Schedule your appointment today and join hundreds of satisfied patients who trust Family Care.</p>
+      </div>
+      <button class="btn-primary">Book your appointment now</button>
+    </div>
+  </section>
+
+   <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Family Care</h4>
+                <p>Providing compassionate and comprehensive healthcare services for families in our community.</p>
+                <div class="footer-social">
+                    <div class="social-icon">f</div>
+                    <div class="social-icon">𝕏</div>
+                    <div class="social-icon">📷</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="main.html">Services</a></p>
+                <p><a href="login.html">Login</a></p>
+                <p><a href="About.html">About Us</a></p>
+                <p><a href="signup.html">Sign up</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <p>Adult Health Care</a></p>
+                <p>Child Health Care</a></p>
+                <p>Corporate Health</a></p>
+                <p>Emergency Care</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Medical Avenue</p>
+                <p>📞 +111-222-333-0</p>
+                <p>📧 info@familycare.com</p>
+                <p>⏰ 24/7 Available</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Family Care Hospital. All rights reserved. | Compassionate Care for Your Family</p>
+        </div>
+    </footer>
+
+  <script>
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    const buttons = document.querySelectorAll('.btn-primary');
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        alert('Appointment booking feature would integrate with your scheduling system here!');
+      });
+    });
+  </script>
+</body>
+</html>

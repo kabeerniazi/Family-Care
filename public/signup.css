@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f1fb;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-section { 
+    width: 40%;
+    background: #2d71e8;
+    color: white;
+    padding: 40px;
+    position: relative;
+}
+
+.left-content {
+    margin-top: 30px;
+}
+
+.left-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 38px;
+}
+
+.left-content p {
+    margin-top: 20px;
+    font-size: 15px;
+    width: 80%;
+}
+
+.doctor-img {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+}
+
+.right-section {
+    width: 60%;
+    padding: 50px;
+    position: relative;
+    background: #f7f5ff;
+}
+
+.back-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #dcdcdc;
+    padding: 15px 30px;
+    border-bottom-left-radius: 40px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3e3d3d;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1.8px solid #c5c5c5;
+    outline: none;
+}
+
+.signup-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background: #6848e8;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-text {
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login-link {
+    color: #6848e8;
+    text-decoration: none;
+}
+
+.or-text {
+    text-align: center;
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+.social-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-btn {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #c5c5c5;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.social-btn img {
+    width: 50px;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}

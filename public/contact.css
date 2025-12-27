@@ -1,0 +1,65 @@
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial, Helvetica, sans-serif}
+.page{display:flex;min-height:100vh;background:#bfd7ff}
+
+.left-col{flex:1;padding:56px 64px}
+.lead-title{color:#0e4f89;font-size:22px;line-height:1.3;margin:0 0 28px;font-weight:700}
+
+.form{max-width:840px}
+.field{margin-bottom:22px}
+.field input,.field textarea{
+  width:100%; 
+  padding:18px 20px;
+  border-radius:8px;
+  border:0;
+  background:#fffdf7;
+  font-size:16px;
+  color:#114b7a;
+  box-shadow:0 0 0 4px rgba(255,255,255,0.4) inset;
+}
+.field textarea{resize:vertical}
+
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+.error{display:block;color:#b10000;font-size:13px;height:18px;margin-top:6px;}
+
+.cta-row{display:flex;align-items:center;gap:20px;margin-top:6px}
+.btn{border:0;cursor:pointer}
+.btn.primary{
+  background:#1e78d6;color:#fff;padding:14px 24px;border-radius:12px;font-weight:700;
+  box-shadow:0 4px 0 rgba(0,0,0,0.08);min-width:260px;
+}
+.hours {
+  color:#fff;
+  font-weight:700;
+  background:solid blue;
+  margin-left:12px;
+  font-size:14px;
+  opacity:0.95;
+}
+
+.emergency{margin-top:26px;color:#114b7a;font-weight:700;display:flex;align-items:center;gap:12px}
+
+.right-col{width:420px;padding:40px 48px;display:flex;flex-direction:column;align-items:center;gap:24px}
+.bubble{background:#1166cc;color:#fff;padding:34px;border-radius:220px;width:320px;text-align:left;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.bubble h2{margin:0 0 8px;font-size:28px;line-height:1;color:#fff}
+.bubble p{margin:0;color:rgba(255,255,255,0.95);font-size:15px}
+
+.oval{width:320px;height:220px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff}
+.oval img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .45s ease}
+
+.info-card{background:#1166cc;color:#fff;padding:18px;border-radius:6px;width:320px}
+.info-line{margin-bottom:12px}
+.info-line p{margin:25px 0 0;font-weight:700}
+.btn.pill{
+  display:inline-block;margin-top:8px;padding:14px 26px;background:#e8e8e8;color:#111;border-radius:40px;font-weight:700;text-decoration:none;
+}
+
+@media (max-width: 900px){
+  .page{flex-direction:column}
+  .right-col{display:none}
+  .left-col{padding:28px}
+  .lead-title{font-size:20px}
+  .btn.primary{min-width:180px}
+  .hours{display:block;margin-left:0;margin-top:6px;opacity:0.95}
+}

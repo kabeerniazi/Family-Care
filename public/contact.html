@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medical Assistance — Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <div class="page">
+    <main class="left-col">
+      <h1 class="lead-title">Need Medical Assistance? We’re Here to Help.<br/>
+      Please fill out the form below and our team will contact you.</h1> 
+
+      <form id="contactForm" class="form">
+        <div class="field">
+          <label class="visually-hidden" for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="*  FULL NAME" />
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="*  EMAIL ADRESS" />
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="phone">Contact</label>
+          <input id="phone" name="phone" type="tel" placeholder="*  CONTACT NUMBER" />
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="service">Service</label>
+          <input id="service" name="service" type="text" placeholder="*  TYPE OF SERVICE" />
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="message">Issue</label>
+          <textarea id="message" name="message" placeholder="EXPLAIN YOUR ISSUE........" rows="7"></textarea>
+          <small class="error"></small>
+        </div>
+
+        <div class="cta-row">
+          <button type="submit" class="btn primary">BOOK YOUR APPOINTMENT</button>
+          <div class="hours">
+            <div><strong>Mon-Fri:</strong> 9:00 AM – 6:00 PM</div>
+            <div><strong>Sat:</strong> 10:00 AM – 2:00 PM</div>
+            <div><strong>Sun:</strong> Closed</div>
+          </div>
+        </div>
+
+        <div class="emergency">
+          <span class="phone-icon">📞</span>
+          For emergencies, call <strong>+92 300 1234567</strong>
+        </div>
+      </form>
+    </main>
+
+    <aside class="right-col" aria-hidden="false">
+      <div class="bubble">
+        <h2>Your Health<br/>is our priority</h2>
+        <p>we are committed to caring for you with compassion and dedication. With expert guidance and a friendly environment, we make sure you feel safe, supported, and valued.</p>
+      </div>
+
+      <div class="oval">
+    <img class="lazy" data-src="contact.png" src="contact.png" alt="doctor contact" />
+      </div>
+
+      <div class="info-card">
+        <div class="info-line"><strong>📍 Location</strong>
+          <p>123 HealthCare Street, Near City Hospital, Islamabad, Pakistan</p>
+        </div>
+
+        <div class="info-line"><strong>🕒 Hours</strong>
+          <p>Mon-Fri: 9:00 AM – 6:00 PM</p>
+        </div>
+
+        <a class="btn pill" href="homepage.html">Back To Homepage</a>
+      </div>
+    </aside>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>

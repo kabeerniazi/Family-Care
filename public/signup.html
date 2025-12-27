@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+<div class="logo"- style="position: absolute; z-index: 10; left:10px; top:10px;">
+    <img src="stethoscope.png" alt="" width="50px">
+</div>
+<div class="main-container">
+
+    <div class="left-section">
+        <div class="left-content">
+            <h1>Your Health ,<br> Our Priority</h1>
+            <p>Create your account to book appointments and access your health records.
+    <br>Stay connected with your doctors anytime.
+</p>
+
+        </div>
+
+        <img src="https://as1.ftcdn.net/v2/jpg/06/48/69/42/1000_F_648694278_haC94bdL26EedqLMIbMpLACqzxwuvq4f.webp"
+             class="doctor-img" alt="Doctor">
+    </div>
+
+    <div class="right-section">
+
+        <a href="homepage.html" class="back-btn">Back To Homepage</a>
+
+        <h2>Create Account</h2>
+
+        <form id="signupForm">
+
+            <div class="row">
+                <input type="text" id="fname" placeholder="First Name">
+                <input type="text" id="lname" placeholder="Last Name">
+            </div>
+
+            <input type="email" id="email" placeholder="Email">
+
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+
+        <p class="login-text">Already have an account? 
+            <a href="login.html" class="login-link">Login</a>
+        </p>
+
+        <h3 class="or-text">-OR-</h3>
+
+        <div class="social-wrapper">
+            <button class="social-btn google">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png">
+            </button>
+
+            <button class="social-btn facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="formValidation.js"></script>
+
+</body>
+</html>

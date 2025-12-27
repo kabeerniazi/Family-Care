@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background-image: url('https://plus.unsplash.com/premium_photo-1681843126728-04eab730febe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; 
+}
+
+.right {
+  flex: 1;
+  background: #0b59d6;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-btn {
+  width: 50%;
+  padding: 12px;
+  border: none;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: block;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.or {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.social-btn {
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #000;
+  gap: 6px;
+}
+
+.social-btn .icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.social-btn.google {
+  border-color: #db4437;
+}
+
+.social-btn.facebook {
+  border-color: #1877f2;
+}
+
+.error {
+  color: #ffdddd;
+  font-size: 14px;
+  display: none;
+  margin: -5px 0 10px 0;
+}
+
+.social-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    flex: 1;
+  }
+}
