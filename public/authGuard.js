@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.getElementById("nav-login"); 
     const signupBtn = document.getElementById("nav-signup");
     const logoutBtn = document.getElementById("nav-logout");
-
     
     if (isLoggedIn === "true") {
         if (loginBtn) loginBtn.style.display = "none";
@@ -15,15 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (logoutBtn) logoutBtn.style.display = "none";
     }
 
-   
     const protectedPages = ["testimonial.html", "contact.html"];
     const currentPage = window.location.pathname.split("/").pop();
-
     if (protectedPages.includes(currentPage) && isLoggedIn !== "true") {
         alert("Access Denied! Please login to your Family Care account first.");
         window.location.href = "/login.html";
     }
-
     
     if (logoutBtn) {
         logoutBtn.addEventListener("click", (e) => {
