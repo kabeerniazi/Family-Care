@@ -21,8 +21,11 @@ form.addEventListener("submit", async (e) => {
         const result = await response.json();
 
         if (response.ok) {
-            alert("Welcome back!");
-            window.location.href = "index.html";
+           localStorage.setItem("isLoggedIn", "true"); 
+    localStorage.setItem("userEmail", email.value); 
+    
+    alert("Welcome back!");
+    window.location.href = "/index.html";
         } else {
             alert(result.error || "Login failed");
         }
