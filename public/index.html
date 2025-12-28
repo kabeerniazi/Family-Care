@@ -19,6 +19,7 @@
     </nav>
 
    <a href ="/login.html" class="login-btn">Login/Signup</a>
+    <button id="logoutBtn" style="display:none;">Logout</button>
 </header>
 
 
@@ -117,6 +118,18 @@
         <button class="footer-btn">Make an appointment.</button>
     </div>
 </section>
+<script>
+    const logoutBtn = document.getElementById("logoutBtn");
+if (localStorage.getItem("isLoggedIn") === "true") {
+    logoutBtn.style.display = "block";
+}
 
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userEmail");
+    alert("Logged out successfully!");
+    window.location.href = "/login.html";
+});
+</script>
 </body>
 </html>
