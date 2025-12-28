@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
-    const loginBtn = document.getElementById("nav-login"); // Ensure these IDs match your HTML
+    const loginBtn = document.getElementById("nav-login"); 
     const signupBtn = document.getElementById("nav-signup");
     const logoutBtn = document.getElementById("nav-logout");
 
-    // --- Part A: Logic for UI (Show/Hide Buttons) ---
+    
     if (isLoggedIn === "true") {
         if (loginBtn) loginBtn.style.display = "none";
         if (signupBtn) signupBtn.style.display = "none";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (logoutBtn) logoutBtn.style.display = "none";
     }
 
-    // --- Part B: Logic for Protected Pages ---
+   
     const protectedPages = ["testimonial.html", "contact.html"];
     const currentPage = window.location.pathname.split("/").pop();
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "/login.html";
     }
 
-    // --- Part C: Logout Functionality ---
+    
     if (logoutBtn) {
         logoutBtn.addEventListener("click", (e) => {
             e.preventDefault();
