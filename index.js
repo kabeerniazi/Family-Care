@@ -5,7 +5,10 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
-app.use(express.static('public')); // Serves your HTML/CSS/JS
+app.use(express.static('public'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // --- MongoDB Connection ---
 // Note: We use process.env.MONGODB_URI to match your Vercel settings
